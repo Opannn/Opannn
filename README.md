@@ -33,14 +33,14 @@ Menentukan Berat dari cereal terlalu berat atau tidak.
  [80 Cereals] (https://www.kaggle.com/datasets/crawford/80-cereals)
 
 ### Variabel-variabel pada 80 Cereals adalah sebagai berikut:
-calories = Masukan Calorie
-protein =  Masukan protein
-fat = Masukan Fat
-sodium = Masukan Sodium
-fiber = Masukan Fiber
-carbo = Masukan Carbo
-sugars = Masukan Sugar
-rating = Masukan Rating dari cereal
+- calories = Masukan Calorie
+- protein =  Masukan protein
+- fat = Masukan Fat
+- sodium = Masukan Sodium
+- fiber = Masukan Fiber
+- carbo = Masukan Carbo
+- sugars = Masukan Sugar
+- rating = Masukan Rating dari cereal
 
 ## Data Preparation
 
