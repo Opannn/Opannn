@@ -30,7 +30,7 @@ Menentukan Berat dari cereal terlalu berat atau tidak.
 
  Dataset yang saya gunakan berasal dari Kaggle yang berisi 80 Cereals. Dataset ini merupakan sekumpulan data yang dikumpulkan dari website 80 Cereal. Dataset ini mengandung lebih dari 10 columns setelah dilakukan data cleaning..
  <br>
- [80 Cereals] https://www.kaggle.com/datasets/crawford/80-cereals
+ [80 Cereals] [https://www.kaggle.com/datasets/crawford/80-cereals]
 
 ### Variabel-variabel pada 80 Cereals adalah sebagai berikut:
 calories = Masukan Calorie
