@@ -210,7 +210,7 @@ pred = lr.predict(X_test)
 score = lr.score(X_test, y_test)
 print('akurasi model regresi linier = ', score)
 ```
-dan hasil yang saya dapatkan adalah 0.0.8429417917724311 atau 84.2%, itu berarti model ini memiliki keseimbangan yang baik antara presisi dan recall. Karena kita mencari patokan harga untuk membeli Apartment maka model yang presisi sangat dibutuhkan agar kemungkinan terjadinya kesalahan semakin sedikit.
+dan hasil yang saya dapatkan adalah 0.8429417917724311 atau 84.2%, itu berarti model ini memiliki keseimbangan yang baik antara presisi dan recall. Karena kita mencari patokan harga untuk membeli Apartment maka model yang presisi sangat dibutuhkan agar kemungkinan terjadinya kesalahan semakin sedikit.
 
 ## Deployment
 
