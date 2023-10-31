@@ -12,15 +12,15 @@ Proyek ini dapat digunakan untuk Mencari Berat Dari Cereal Membangun sistem otom
 
 ## Business Understanding
 
-memproduksi dan memasarkan sereal yang membantu individu dalam pengelolaan berat badan dengan memberikan pilihan makanan rendah kalori dan tinggi serat.
+Rating dari cereal dalam konteks bisnis adalah penilaian atau evaluasi atas kualitas, popularitas, dan performa produk sereal. Penilaian ini bisa dilakukan oleh berbagai pihak, seperti konsumen, produsen, atau ahli industri makanan.
 
 ### Problem Statements
 
-Dalam Kasus ini ,mencari kekurangnya pilihan makanan rendah kalori yang memadai dan bergizi di pasar saat ini membuat individu yang ingin mengelola berat badan kesulitan dalam memenuhi kebutuhan gizi mereka tanpa melebihi asupan kalori harian.
+Problem statement dalam konteks rating sereal adalah pernyataan yang mengidentifikasi masalah atau tantangan yang perlu diatasi terkait dengan penilaian atau rating produk sereal.
 
 ### Goals
 
-Menentukan Berat dari cereal terlalu berat atau tidak.
+Mencari Rating Dari cereal baik untuk kesehatan apa tidak
 
 ### Solution statements
 
@@ -33,14 +33,14 @@ Menentukan Berat dari cereal terlalu berat atau tidak.
  [80 Cereals] (https://www.kaggle.com/datasets/crawford/80-cereals)
 
 ### Variabel-variabel pada 80 Cereals adalah sebagai berikut:
-- calories = Masukan Calorie
-- protein =  Masukan protein
-- fat = Masukan Fat
-- sodium = Masukan Sodium
-- fiber = Masukan Fiber
-- carbo = Masukan Carbo
-- sugars = Masukan Sugar
-- rating = Masukan Rating dari cereal
+- calories = banyaknya kalori dalam cereal
+- protein =  banyaknya protein dalam cereal
+- fat = beberapa fat di dalam cereal
+- sodium = banyaknya sodium/natrium dalam cereal
+- fiber = banyaknya fiber atau serat di dalam cereal
+- carbo = beberapa Carbo di dalam cereal
+- sugars = beberapa sugar di dalam cereal
+- weight = beberapa berat/weight dari cereal
 
 ## Data Preparation
 
@@ -158,9 +158,9 @@ plot_histogram(cereals['sugars'], 'Sugar')
 ![Alt text](output.png)
 Kode ini menunjukkan bagaimana Anda mengambil beberapa fitur (features)
 ``` bash
-features = ['calories','protein','fat','sodium','fiber','carbo','sugars','rating']
+features = ['calories','protein','fat','sodium','fiber','carbo','sugars','weight']
 x = df[features]
-y = df['weight']
+y = df['rating']
 x.shape, y.shape
 ```
 Kode ini menunjukkan model selection (features)
@@ -183,16 +183,16 @@ print('akurasi model regresi linier = ', score)
 ```
 lalu masukan data sesuai yang kalian masukan ke features dan prediction
 ``` bash
-input_data = np.array([[120,3,5,15,2,8,8,33.983679]])
+input_data = np.array([[120,3,5,15,2,8,8,1]])
 
 prediction = lr.predict(input_data)
-print('Estimasi nilai weaght di dalam creal :', prediction)
+print('prediksi rating di dalam creal :', prediction)
 ```
 wow, berhasil!!, sekarang modelnya sudah selesai, mari kita export sebagai sav agar nanti bisa kita gunakan pada project web streamlit kita.
 ``` bash
 import pickle
 
-filename = 'estimasi_creal.sav'
+filename = 'prediksi_creal.sav'
 pickle.dump(lr,open(filename,'wb'))
 ```
 
@@ -214,7 +214,7 @@ print('akurasi model regresi linier = ', score)
 Y = a + bX
 ```
 
-dan hasil yang saya dapatkan adalah 0.8429417917724311 atau 84.2%, itu berarti model ini memiliki keseimbangan yang baik antara presisi dan recall. Karena kita mencari patokan harga untuk membeli Apartment maka model yang presisi sangat dibutuhkan agar kemungkinan terjadinya kesalahan semakin sedikit.
+dan hasil yang saya dapatkan adalah 0.9934779670066929 atau 99.3%, itu berarti model ini memiliki keseimbangan yang baik antara presisi dan recall. Karena kita mencari patokan harga untuk membeli Apartment maka model yang presisi sangat dibutuhkan agar kemungkinan terjadinya kesalahan semakin sedikit.
 
 ## Deployment
 
