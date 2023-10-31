@@ -3,21 +3,21 @@ import streamlit as st
 
 model = pickle.load(open('estimasi_creal.sav', 'rb'))
 
-st.title('Estimasi nilai weight di dalam creal')
+st.title('prediksi nilai Rating di dalam creal')
 
-calories = st.number_input('Input calories')
-protein = st.number_input('Input protein')
-fat = st.number_input('Input fat')
-sodium = st.number_input('Input sodium')
-fiber = st.number_input('Input fiber')
-carbo = st.number_input('Input carbo')
-sugars = st.number_input('Input sugars')
-rating = st.number_input('Input rating')
+calories = st.number_input('Input calories dari Cereal')
+protein = st.number_input('Input protein dari Cereal')
+fat = st.number_input('Input fat dari Cereal')
+sodium = st.number_input('Input sodium dari Cereal')
+fiber = st.number_input('Input fiber dari Cereal ')
+carbo = st.number_input('Input carbo dari Cereal')
+sugars = st.number_input('Input sugar dari Cereal')
+weight = st.number_input('Input weight dari Cereal')
 
 predict = ''
 
-if st.button('Estimasi Weight'):
+if st.button('Prediksi rating'):
     predict = model.predict(
-        [[calories,protein,fat,sodium,fiber,carbo,sugars,rating]]
+        [[calories,protein,fat,sodium,fiber,carbo,sugars,weight]]
     )
-    st.write ('Estimasi Creal weight : ', predict)
+    st.write ('Hasil Dari Prediksi Rating : ', predict)
