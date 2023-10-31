@@ -218,6 +218,6 @@ dan hasil yang saya dapatkan adalah 0.9934779670066929 atau 99.3%, itu berarti m
 
 ## Deployment
 
-[My Estimation App] [https://opannn-raufan.streamlit.app/]
+[My Estimation App] [https://opann-raufan.streamlit.app/]
 
-![Image1](sa.png)
+![Image1](SSAN.png)
